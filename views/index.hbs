@@ -1,16 +1,39 @@
-<h1>Link your account.</h1>
+<style>
+.center {
+  text-align: center;
+}
 
-<!-- A hidden input named public_token will be appended to this form
-once the user has completed the Link flow. Link will then submit the
-form, sending the public_token to your server. -->
-<form id="some-id" method="POST" action="/authenticate"></form>
+.v-center {
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}
+</style>
+
+<div class="container v-center">
+  <div class="row">
+    <div class="column center">
+      <h1>Link an account</h1>
+      <h4>(pls)</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column center">
+      
+      <!-- A hidden input named public_token will be appended to this form
+      once the user has completed the Link flow. Link will then submit the
+      form, sending the public_token to your server. -->
+      <form id="auth-form" method="POST" action="/authenticate"></form>
+    
+    </div>
+  </div>
+</div>
 
 <!-- See the Parameter Reference for additional documentation. -->
 <script
   src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"
-  data-client-name="Client Name"
-  data-form-id="some-id"
-  data-key="test_key"
-  data-product="auth"
+  data-client-name="Mission Control"
+  data-form-id="auth-form"
+  data-key={{plaid_key}}
+  data-product="income"
   data-env="tartan">
 </script>
