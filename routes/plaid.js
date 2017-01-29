@@ -5,11 +5,6 @@ var requests = require('requests');
 var fileName = 'credentials.json'
 
 module.exports = function(plaidClient, dataFile) {
-    
-  /* GET home page. */
-  router.get('/link', (req, res) => {
-    res.render('index', { "plaid_key" : process.env.PLAID_PUBLIC });
-  });
 
   // GET `/authenticate`
   // Bounce the plaid public token back to plaid and save the access token
