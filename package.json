@@ -15,6 +15,7 @@
     "jsonfile": "^2.4.0",
     "morgan": "~1.7.0",
     "plaid": "^1.2.0",
+    "requests": "^0.1.7",
     "serve-favicon": "~2.3.0"
   }
 }
