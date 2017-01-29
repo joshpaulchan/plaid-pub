@@ -54,6 +54,7 @@ jspm_packages
 # End of https://www.gitignore.io/api/node
 
 *.env
+credentials.json
 
 # Created by https://www.gitignore.io/api/bower
 
