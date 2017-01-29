@@ -1,16 +1,8 @@
 var router = require('express').Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-// GET `/autenticate`
-// Bounce the plaid public token back to plaid and save the access token
-// 
-// 
-router.get('/authenticate', (req, res) => {
-  // save the public token
+router.get('/', (req, res) => {
+  res.render('index', { "plaid_key" : process.env.PLAID_PUBLIC });
 });
 
 module.exports = router;
